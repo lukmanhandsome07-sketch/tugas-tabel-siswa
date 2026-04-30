@@ -42,3 +42,10 @@ function App() {
 }
 
 export default App;
+
+<td style={{
+  color: statusKelulusan === "Lulus" ? "green" : "red",
+  fontWeight: "bold"
+}}>
+  {statusKelulusan}
+</td>
