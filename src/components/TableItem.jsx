@@ -1,13 +1,12 @@
-// src/components/TableItem.jsx
-
 const TableItem = ({
   nama,
   nilai_pekanan,
   nilai_bulanan,
   nilai_akhir,
-  kehadiran,
+  kehadiran
 }) => {
-  // 🎯 Logika Kelulusan (clean & readable)
+
+  // Logika kelulusan
   let statusKelulusan;
 
   if (nilai_akhir >= 75 && kehadiran >= 80) {
@@ -16,12 +15,6 @@ const TableItem = ({
     statusKelulusan = "Tidak Lulus";
   }
 
-  // 🎨 Styling sederhana berbasis status
-  const statusStyle = {
-    color: statusKelulusan === "Lulus" ? "limegreen" : "red",
-    fontWeight: "bold",
-  };
-
   return (
     <tr>
       <td>{nama}</td>
@@ -29,7 +22,7 @@ const TableItem = ({
       <td>{nilai_bulanan}</td>
       <td>{nilai_akhir}</td>
       <td>{kehadiran}%</td>
-      <td style={statusStyle}>{statusKelulusan}</td>
+      <td>{statusKelulusan}</td>
     </tr>
   );
 };
